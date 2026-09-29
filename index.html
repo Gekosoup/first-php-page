@@ -37,3 +37,96 @@
 </head>
 
 <body>
+  <div class="container">
+
+    <h1>🎓 Student Grade Calculator</h1>
+
+    <!-- Student Information -->
+    <h2>Student Information</h2>
+
+    <p>
+        <strong>Name:</strong>
+        <?php echo $studentName; ?>
+    </p>
+
+    <p>
+        <strong>Program:</strong>
+        <?php echo $studentInfo["program"]; ?>
+    </p>
+
+    <p>
+        <strong>Semester:</strong>
+        <?php echo $studentInfo["semester"]; ?>
+    </p>
+
+    <p>
+        <strong>Teacher:</strong>
+        <?php echo $studentInfo["teacher"]; ?>
+    </p>
+
+
+    <!-- Date -->
+    <h2>Assignment Date</h2>
+
+    <p>
+        <?php echo date("F j, Y", strtotime($assignmentDate)); ?>
+    </p>
+
+
+    <!-- Indexed Array -->
+    <h2>Courses</h2>
+
+    <p>
+        First course:
+        <?php echo $courses[0]; ?>
+    </p>
+
+    <p>
+        Second course:
+        <?php echo $courses[1]; ?>
+    </p>
+
+
+    <!-- Grades -->
+    <h2>Assignment Grades</h2>
+
+    <p>
+        Assignment 1:
+        <?php echo $assignment1; ?>%
+    </p>
+
+    <p>
+        Assignment 2:
+        <?php echo $assignment2; ?>%
+    </p>
+
+    <p>
+        Assignment 3:
+        <?php echo $assignment3; ?>%
+    </p>
+
+
+    <!-- Calculation -->
+    <div class="result">
+
+        <h2>Final Average</h2>
+
+        <p>
+            Average =
+            (<?php echo $assignment1; ?> +
+            <?php echo $assignment2; ?> +
+            <?php echo $assignment3; ?>)
+            ÷ 3
+        </p>
+
+        <h2>
+            <?php echo $roundedAverage; ?>%
+        </h2>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
